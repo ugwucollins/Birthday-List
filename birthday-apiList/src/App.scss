@@ -1,0 +1,78 @@
+*::before,
+*::after,
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    #{&}-center{
+      width: 100%;
+      max-width: 1200px;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 1px -1px 8px rgba(0, 0, 0, 0.112);
+      background: linear-gradient(to right,rgba(174, 211, 224, 0.518),transparent);
+      &-div{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: sticky;
+        top: 0px;
+        &-h1{
+            position: relative;
+            color: transparent;
+            font-weight: 800;
+            margin-bottom: 20px;
+            -webkit-text-stroke: 2px gray;
+            &::before{
+                position: absolute;
+                content: 'Birthday TodoList';
+                transition: all 1s;
+                animation: colors1 forwards 4s linear infinite;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0;
+            }
+        }
+    }
+    }
+    & .error{
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 33vh;
+        color: red;
+        height: 5vh;
+        overflow: hidden;
+        & .err{
+            animation: err 1s linear forwards;
+            transition: all 1s;
+        }
+    }
+}
+@keyframes err {
+    0%{
+        transform: translateY(100px);
+    }
+}
+@keyframes colors1 {
+    0%,100%{
+        clip-path: polygon(0% 45%,10% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%);
+        color: rgb(182, 226, 241);
+    }
+    50%{
+        clip-path: polygon(0% 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%,0% 100%);
+        color: darkgray;
+    }
+}

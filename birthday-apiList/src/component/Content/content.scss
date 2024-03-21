@@ -1,0 +1,153 @@
+@import 'variable';
+.content{
+    width: 100%;
+    transition: all 1s;
+    #{&}-List{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        &-div{
+         text-align: left;
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(100px, 240px));
+          justify-content: space-between;
+          transition: all 1s;
+          animation: slide 1s linear forwards;
+          margin-bottom: 10px;
+          background-color:rgb(233, 110, 23);
+          font-size: 16px;
+          font-weight: 600;
+          margin-right: 5px;
+          margin-left: 5px;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 1px 1px 4px grey,1px 2px 3px grey inset;
+          @include Mobile(800px){
+            margin-right: 2px;
+            margin-left: 2px;
+            grid-template-columns: repeat(auto-fit,minmax(100px, 200px));  
+          }
+          @include Mobile(605px){
+            grid-template-columns: repeat(auto-fit,minmax(100px, 150px));  
+            margin-left: 1px;
+            margin-right: 3px;
+            }
+          @include Mobile(455px){
+            grid-template-columns: repeat(auto-fit,minmax(50px, 100px));  
+            margin-left: 1px;
+            margin-right: 3px;
+            }
+          @include Mobile(300px){
+            @include Flex(center,4px,column);
+            justify-content: center;
+            margin-left: 1px;
+            margin-right: 3px;
+            }
+        }
+        &-active{
+         text-align: left;
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(100px, 240px));
+          justify-content: space-between;
+          transition: all 1s;
+          animation: slide 1s linear forwards;
+          margin-bottom: 10px;
+          background: repeating-linear-gradient(to right,white,rgba(0, 0, 255, 0.795));
+          font-size: 15px;
+          font-weight: 700;
+          margin-right: 5px;
+          margin-left: 5px;
+          border: none;
+          border-radius: 5px;
+
+          @include Mobile(800px){
+            margin-right: 2px;
+            margin-left: 2px;
+            grid-template-columns: repeat(auto-fit,minmax(100px, 200px));  
+          }
+          @include Mobile(605px){
+            grid-template-columns: repeat(auto-fit,minmax(100px, 150px));  
+            margin-left: 1px;
+            margin-right: 3px;
+            }
+          @include Mobile(455px){
+            grid-template-columns: repeat(auto-fit,minmax(50px, 100px));  
+            margin-left: 1px;
+            margin-right: 3px;
+            }
+          @include Mobile(300px){
+            @include Flex(center,4px,column);
+            justify-content: center;
+            margin-left: 1px;
+            margin-right: 3px;
+            }
+        }
+    }
+    & .loading{
+        @include Flex(center,4px,row);
+        font-size: 25px;
+        font-weight: 700;
+        margin-top: 33vh;
+    }
+}
+@keyframes slide {
+    0%{
+        transform: translateY(-100px);
+    }
+}
+.list{
+    margin-top: 10px;
+    text-transform: capitalize;
+    margin-left: 2px;
+    @include Mobile(300px){
+    padding: 0px 0px 0px 3px;
+    }
+}
+.date{
+    @include Flex(end,0px,row);
+    margin-top: 15px;
+    @include Mobile(300px){
+        @include Flex(start,0px,row);
+        padding: 0px 0px 0px 3px;
+        }
+}
+.button{
+    cursor: pointer;
+    @extend .date;
+    margin-right: 15px;
+    font-size: 32px;
+    padding: 0px 0px 0px 0px;
+    justify-content: end;
+    color: green;
+    margin-top: 8px;
+    transition: all 1s;
+    &:hover{
+        color: red;
+    }
+    & .btn{
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        margin-top: 5px;
+        transition: all 1s;
+        color:rgba(12, 12, 12, 0.999);
+        background: linear-gradient(to left, lightgray,transparent);
+        &:hover{
+            color: red;
+            font-size: 17px;
+            font-weight: 600;
+            background: linear-gradient(to right, lightgray,transparent);
+
+        }
+    }
+}
+.empty{
+  cursor: pointer;
+  margin-top: 30vh;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(236, 57, 57);
+  text-transform: capitalize;
+}

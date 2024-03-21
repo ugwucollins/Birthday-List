@@ -1,0 +1,188 @@
+.content {
+  width: 100%;
+  transition: all 1s;
+}
+.content .content-List {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+.content .content-List-div {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 240px));
+  justify-content: space-between;
+  transition: all 1s;
+  animation: slide 1s linear forwards;
+  margin-bottom: 10px;
+  background-color: rgb(233, 110, 23);
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px grey, 1px 2px 3px grey inset;
+}
+@media screen and (max-width: 800px) {
+  .content .content-List-div {
+    margin-right: 2px;
+    margin-left: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  }
+}
+@media screen and (max-width: 605px) {
+  .content .content-List-div {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+}
+@media screen and (max-width: 455px) {
+  .content .content-List-div {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .content .content-List-div {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+}
+.content .content-List-active {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 240px));
+  justify-content: space-between;
+  transition: all 1s;
+  animation: slide 1s linear forwards;
+  margin-bottom: 10px;
+  background: repeating-linear-gradient(to right, white, rgba(0, 0, 255, 0.795));
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+}
+@media screen and (max-width: 800px) {
+  .content .content-List-active {
+    margin-right: 2px;
+    margin-left: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  }
+}
+@media screen and (max-width: 605px) {
+  .content .content-List-active {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+}
+@media screen and (max-width: 455px) {
+  .content .content-List-active {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 100px));
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .content .content-List-active {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1px;
+    margin-right: 3px;
+  }
+}
+.content .loading {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  flex-direction: row;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 33vh;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-100px);
+  }
+}
+.list {
+  margin-top: 10px;
+  text-transform: capitalize;
+  margin-left: 2px;
+}
+@media screen and (max-width: 300px) {
+  .list {
+    padding: 0px 0px 0px 3px;
+  }
+}
+
+.date, .button {
+  display: flex;
+  justify-content: end;
+  gap: 0px;
+  flex-direction: row;
+  margin-top: 15px;
+}
+@media screen and (max-width: 300px) {
+  .date, .button {
+    display: flex;
+    justify-content: start;
+    gap: 0px;
+    flex-direction: row;
+    padding: 0px 0px 0px 3px;
+  }
+}
+
+.button {
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 32px;
+  padding: 0px 0px 0px 0px;
+  justify-content: end;
+  color: green;
+  margin-top: 8px;
+  transition: all 1s;
+}
+.button:hover {
+  color: red;
+}
+.button .btn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  transition: all 1s;
+  color: rgba(12, 12, 12, 0.999);
+  background: linear-gradient(to left, lightgray, transparent);
+}
+.button .btn:hover {
+  color: red;
+  font-size: 17px;
+  font-weight: 600;
+  background: linear-gradient(to right, lightgray, transparent);
+}
+
+.empty {
+  cursor: pointer;
+  margin-top: 30vh;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(236, 57, 57);
+  text-transform: capitalize;
+}/*# sourceMappingURL=content.css.map */
