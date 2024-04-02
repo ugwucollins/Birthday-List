@@ -109,4 +109,15 @@
     width: 99%;
     margin: 0px 0px 0px 2px;
   }
+}
+
+.con {
+  font-size: 20px;
+  color: #008000;
+  animation: cons 1s forwards linear;
+}
+@keyframes cons {
+  0% {
+    transform: translateY(100px);
+  }
 }/*# sourceMappingURL=Form.css.map */

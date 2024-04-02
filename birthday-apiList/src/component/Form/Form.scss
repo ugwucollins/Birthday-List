@@ -93,3 +93,13 @@
         }
     }
 }
+.con{
+    font-size: 20px;
+    color: #008000;
+    animation: cons 1s forwards linear;
+    @keyframes cons {
+        0%{
+            transform: translateY(100px);
+        }
+    }
+}

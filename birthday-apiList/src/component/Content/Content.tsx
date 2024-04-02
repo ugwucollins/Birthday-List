@@ -1,4 +1,5 @@
-import React, {  useState } from 'react'
+'use client';
+import React, {  useEffect, useState } from 'react'
 import './content.css';
 import Loading from '../Loading/Loading';
 import { GrStatusGood } from "react-icons/gr";
@@ -11,9 +12,7 @@ const Content = ({birthInput,handleDelete,isLoading}:any) => {
   // const dat = `${document.getElementById('data')?.innerText.toString()}`;
   // const al = dat.slice(0,4);
   // const sub = +year - +al;
-
-  // useMemo(() => {
-  // },[])
+ 
 
   const[select,setselect] = useState(0);
   const[del,setdel] = useState(true);
@@ -21,7 +20,6 @@ const Content = ({birthInput,handleDelete,isLoading}:any) => {
     <>
     {birthInput.length || isLoading?
       <div className='content'>
-
         {isLoading?
         <>
           <div className='loading'>
@@ -41,7 +39,7 @@ const Content = ({birthInput,handleDelete,isLoading}:any) => {
                   <p className='date' id='data'>{index.dat}</p>
                   <div className='button'>
                   {del || selectIndex  !== select?
-                      <span onClick={() => {
+                      <span onDoubleClick={() => {
                         setdel(false)
                         setselect(selectIndex)
                       }}> 
